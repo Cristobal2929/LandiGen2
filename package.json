@@ -1,0 +1,9 @@
+{
+  "name": "landigen2",
+  "version": "1.0.0",
+  "description": "Generador de landing pages",
+  "main": "www/js/script.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
