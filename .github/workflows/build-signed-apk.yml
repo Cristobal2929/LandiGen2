@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     - name: Set up Java
       uses: actions/setup-java@v3
@@ -30,7 +31,6 @@ jobs:
 
     - name: Add Android Platform
       run: cordova platform add android@14.3.0
-
 
     - name: Build APK
       run: cordova build android --release -- --keystore=landigen.keystore --storePassword=$KEYSTORE_PASSWORD --alias=$KEY_ALIAS --password=$KEY_PASSWORD
