@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.tuempresa.landigen2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>LandiGen2</name>
+    <description>Generador de landing pages</description>
+    <author email="tu@email.com" href="https://tusitio.com">Cristóbal</author>
+    <content src="www/template1.html" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="Fullscreen" value="true" />
+</widget>
