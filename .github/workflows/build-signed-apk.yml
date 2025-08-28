@@ -30,7 +30,7 @@ jobs:
       run: echo "$KEYSTORE_BASE64" | base64 --decode > landigen.keystore
 
     - name: Add Android Platform
-      run: cordova platform add android@14.3.0
+      run: cordova platform add android@14.0.1
 
     - name: Build APK
       run: cordova build android --release -- --keystore=landigen.keystore --storePassword=$KEYSTORE_PASSWORD --alias=$KEY_ALIAS --password=$KEY_PASSWORD
