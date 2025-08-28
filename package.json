@@ -2,8 +2,9 @@
   "name": "landigen2",
   "version": "1.0.0",
   "description": "Generador de landing pages",
-  "main": "www/js/script.js",
+  "main": "index.js",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "author": "Cristóbal",
+  "license": "ISC",
+  "dependencies": {}
 }
