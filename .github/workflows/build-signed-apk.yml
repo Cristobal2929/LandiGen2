@@ -31,7 +31,7 @@ jobs:
     - name: Decode Keystore
       run: echo "$KEYSTORE_BASE64" | base64 --decode > landigen.keystore
 
-    - name: Install Android Platform
+    - name: Add Android Platform
       run: cordova platform add android
 
     - name: Build APK
