@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
     - name: Set up Java
       uses: actions/setup-java@v3
@@ -23,15 +22,17 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Upgrade npm
+      run: npm install -g npm@latest
+
     - name: Install Cordova
       run: npm install -g cordova
 
     - name: Decode Keystore
       run: echo "$KEYSTORE_BASE64" | base64 --decode > landigen.keystore
 
-    - name: Add Android Platform
-      run: cordova platform add android@14.0.1
-
+    - name: Install Android Platform
+      run: cordova platform add android
 
     - name: Build APK
       run: cordova build android --release -- --keystore=landigen.keystore --storePassword=$KEYSTORE_PASSWORD --alias=$KEY_ALIAS --password=$KEY_PASSWORD
